@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
 
 /*Primary*/
-$light-color: #fdfcfd;
 $light-scissor-color: hsl(40, 84%, 53%);
 $dark-scissor-color: hsl(39, 92%, 41%);
 $light-paper-color: hsl(230, 89%, 65%);
@@ -14,6 +13,7 @@ $light-spock-color: hsl(189, 58%, 57%);
 $dark-spock-color: hsl(189, 70%, 38%);
 
 /* Neutral */
+$light-color: #fdfcfd;
 $dark-text: hsl(229, 25%, 31%);
 $score-text: hsl(229, 64%, 46%);
 $header-outline: hsl(217, 16%, 45%);
@@ -31,15 +31,16 @@ $moves:
 @mixin move-item ($color, $dark-color){
   position: absolute;
   border: 12px solid $color;
-  background-image: linear-gradient(to bottom, #dedede, #e0e0e0, #e3e3e3, #e5e5e5, #e8e8e8, #eaeaeb, #ededed, #efeff0, #f2f2f3, #f6f5f7, #f9f9fa, #fdfcfd);
   border-radius: 50%;
-  width: 30vw;
-  height: 30vw;
+  width: 25vw;
+  height: 25vw;
   max-width: 150px;
   max-height: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  background-image: linear-gradient(to bottom, #dedede, #e0e0e0, #e3e3e3, #e5e5e5, #e8e8e8, #eaeaeb, #ededed, #efeff0, #f2f2f3, #f6f5f7, #f9f9fa, #fdfcfd);
   box-shadow: 
     inset #bbbed5 0px 5px,
     $dark-color 0px 5px;
@@ -49,9 +50,14 @@ $moves:
   }
 }
 
+*{
+  box-sizing: border-box;
+}
+
 body{
   font-family: 'Barlow Semi Condensed', sans-serif;
   background-image: $radial-dark-gradient;
   color: $light-color;
   padding: 30px;
+  position: relative;
 }

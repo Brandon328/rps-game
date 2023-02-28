@@ -1,0 +1,16 @@
+.dark-button{
+  padding: 10px 22px 10px 30px;
+  border: 1px solid $light-color;
+  border-radius: 8px;
+  color: $light-color;
+  background-color: transparent;
+  text-transform: uppercase;
+  cursor: pointer;
+  letter-spacing: 8px;
+
+  //position
+  position: absolute;
+  bottom: 90px;
+  left: 50%;
+  transform: translate(-50%);
+}
