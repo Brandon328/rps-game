@@ -1,0 +1,51 @@
+main{
+  height: 75vh;
+
+  .main-container{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+
+    .pentagon-icon-container{
+      position: relative;
+      width: 80%;
+      max-width: 400px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .pentagon{
+        width: 100%;
+      }
+    }
+  }
+}
+
+@each $move, $light-color, $dark-color in $moves{
+  .#{$move}-icon-container{
+    @include move-item($light-color, $dark-color);
+  }
+}
+
+.scissor-icon-container{
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.paper-icon-container{
+  top: 17%;
+  right: -45px;
+}
+.spock-icon-container{
+  top: 17%;
+  left: -45px;
+}
+.rock-icon-container{
+  bottom: -45px;
+  right: 0;
+}
+.lizard-icon-container{
+  bottom: -45px;
+  left: 0;
+}

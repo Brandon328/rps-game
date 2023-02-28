@@ -1,11 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
 
 /*Primary*/
-$scissors-gradient: linear-gradient(hsl(39, 89%, 49%),hsl(40, 84%, 53%));
-$paper-gradient: linear-gradient(hsl(230, 89%, 62%),hsl(230, 89%, 65%));
-$rock-gradient: linear-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
-$lizard-gradient: linear-gradient(hsl(261, 73%, 60%), hsl(261, 72%, 63%));
-$cyan: linear-gradient(hsl(189, 59%, 53%), hsl(189, 58%, 57%));
+$light-color: #fdfcfd;
+$light-scissor-color: hsl(40, 84%, 53%);
+$dark-scissor-color: hsl(39, 92%, 41%);
+$light-paper-color: hsl(230, 89%, 65%);
+$dark-paper-color: hsl(230, 59%, 48%);
+$light-rock-color: hsl(349, 70%, 56%);
+$dark-rock-color: hsl(349, 67%, 44%);
+$light-lizard-color: hsl(261, 72%, 63%);
+$dark-lizard-color: hsl(261, 64%, 45%);
+$light-spock-color: hsl(189, 58%, 57%);
+$dark-spock-color: hsl(189, 70%, 38%);
 
 /* Neutral */
 $dark-text: hsl(229, 25%, 31%);
@@ -13,8 +19,39 @@ $score-text: hsl(229, 64%, 46%);
 $header-outline: hsl(217, 16%, 45%);
 
 /* Background */
-$radial-gradient: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+$radial-dark-gradient: radial-gradient(circle, #1f3656, #1b2e4f, #182547, #151d40, #131538);
+
+$moves: 
+  "rock" $light-rock-color $dark-rock-color,
+  "paper" $light-paper-color $dark-paper-color,  
+  "scissor" $light-scissor-color $dark-scissor-color, 
+  "lizard" $light-lizard-color $dark-lizard-color, 
+  "spock" $light-spock-color $dark-spock-color;
+
+@mixin move-item ($color, $dark-color){
+  position: absolute;
+  border: 12px solid $color;
+  background-image: linear-gradient(to bottom, #dedede, #e0e0e0, #e3e3e3, #e5e5e5, #e8e8e8, #eaeaeb, #ededed, #efeff0, #f2f2f3, #f6f5f7, #f9f9fa, #fdfcfd);
+  border-radius: 50%;
+  width: 30vw;
+  height: 30vw;
+  max-width: 150px;
+  max-height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 
+    inset #bbbed5 0px 5px,
+    $dark-color 0px 5px;
+
+  img{
+    width: 45%;
+  }
+}
 
 body{
   font-family: 'Barlow Semi Condensed', sans-serif;
+  background-image: $radial-dark-gradient;
+  color: $light-color;
+  padding: 30px;
 }

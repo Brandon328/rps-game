@@ -1,5 +1,7 @@
 main
-  +img-item("./src/images/bg-pentagon.svg", "pentagon", "pentagon-icon")
-  each img, move in moves
-    +img-item(img, move, "container-img__"+move+"-icon"+" container-img__move")
-  button RULES
+  .main-container
+    .icon-container.pentagon-icon-container
+      img(src="./src/images/bg-pentagon.svg" alt="pentagon" class="pentagon")
+      each img, move in moves
+        +img-item(img, move, "icon-container__"+move+"-icon"+" icon-container__icon")
+    //- button RULES

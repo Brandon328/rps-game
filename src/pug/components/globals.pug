@@ -1,4 +1,4 @@
--var moves= {rock: "src/images/icon-rock.svg", paper:"src/images/icon-paper.svg", scissors:"src/images/icon-scissors.svg", lizard:"src/images/icon-lizard.svg", spock:"src/images/icon-spock.svg"}
+-var moves= {rock: "src/images/icon-rock.svg", paper:"src/images/icon-paper.svg", scissor:"src/images/icon-scissors.svg", lizard:"src/images/icon-lizard.svg", spock:"src/images/icon-spock.svg"}
 
 mixin img-item(s, a, c)
-  .container-img: img(src=s alt=a class=c)
+  .icon-container(class=a+"-icon-container"+" move"): img(src=s alt=a class=c)
