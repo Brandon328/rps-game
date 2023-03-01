@@ -1,6 +1,13 @@
 main{
+  position: relative;
   height: 65vh;
   margin: 0 0 50px 0;
+  .main__button{
+    position: absolute;
+    bottom: -38px;
+    left: 50%;
+    transform: translate(-50%);
+  }
   .main-container{
     position: relative;
     top: 50%;
@@ -14,9 +21,32 @@ main{
       display: flex;
       justify-content: center;
       align-items: center;
-
       .pentagon{
         width: 100%;
+      }
+      .move{
+        position: absolute;
+      }
+      .scissor-icon-container{
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .paper-icon-container{
+        top: 17%;
+        right: -45px;
+      }
+      .spock-icon-container{
+        top: 17%;
+        left: -45px;
+      }
+      .rock-icon-container{
+        bottom: -45px;
+        right: 0;
+      }
+      .lizard-icon-container{
+        bottom: -45px;
+        left: 0;
       }
     }
   }
@@ -26,26 +56,4 @@ main{
   .#{$move}-icon-container{
     @include move-item($light-color, $dark-color);
   }
-}
-
-.scissor-icon-container{
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.paper-icon-container{
-  top: 17%;
-  right: -45px;
-}
-.spock-icon-container{
-  top: 17%;
-  left: -45px;
-}
-.rock-icon-container{
-  bottom: -45px;
-  right: 0;
-}
-.lizard-icon-container{
-  bottom: -45px;
-  left: 0;
 }

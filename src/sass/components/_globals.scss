@@ -11,7 +11,7 @@ $light-lizard-color: hsl(261, 72%, 63%);
 $dark-lizard-color: hsl(261, 64%, 45%);
 $light-spock-color: hsl(189, 58%, 57%);
 $dark-spock-color: hsl(189, 70%, 38%);
-
+$unpick-color: #17213c;
 /* Neutral */
 $light-color: #fdfcfd;
 $dark-text: hsl(229, 25%, 31%);
@@ -29,8 +29,9 @@ $moves:
   "spock" $light-spock-color $dark-spock-color;
 
 @mixin move-item ($color, $dark-color){
-  position: absolute;
-  border: 12px solid $color;
+  border-width: 15px;
+  border-style: solid;
+  border-color: $color;
   border-radius: 50%;
   width: 25vw;
   height: 25vw;
@@ -42,8 +43,8 @@ $moves:
   cursor: pointer;
   background-image: linear-gradient(to bottom, #dedede, #e0e0e0, #e3e3e3, #e5e5e5, #e8e8e8, #eaeaeb, #ededed, #efeff0, #f2f2f3, #f6f5f7, #f9f9fa, #fdfcfd);
   box-shadow: 
-    inset #bbbed5 0px 5px,
-    $dark-color 0px 5px;
+    inset #bbbed5 0px 10px,
+    $dark-color 0px 10px;
 
   img{
     width: 45%;
@@ -54,10 +55,15 @@ $moves:
   box-sizing: border-box;
 }
 
+html{
+  font-size: 16px;
+}
+
 body{
   font-family: 'Barlow Semi Condensed', sans-serif;
   background-image: $radial-dark-gradient;
   color: $light-color;
   padding: 30px;
   position: relative;
+  font-size: 1rem;
 }

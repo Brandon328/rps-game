@@ -1,9 +1,12 @@
-@import "components/reset.scss";
-@import "components/globals.scss";
-@import "components/header.scss";
-@import "components/main-content.scss";
-@import "components/buttons.scss";
-@import "components/rules.scss";
+@import "components/reset";
+@import "components/globals";
+@import "components/header";
+@import "components/main-content";
+@import "components/buttons";
+@import "components/rules";
+@import "components/match-section";
+@import "components/footer";
+@import "components/responsive";
 
 .inactive{
   display: none;

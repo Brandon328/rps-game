@@ -1,16 +1,19 @@
-.dark-button{
-  padding: 10px 22px 10px 30px;
-  border: 1px solid $light-color;
+.button{
+  padding: 10px 41px 10px 45px;
   border-radius: 8px;
-  color: $light-color;
-  background-color: transparent;
   text-transform: uppercase;
   cursor: pointer;
-  letter-spacing: 8px;
+  letter-spacing: 4px;
+  font-size: 0.75rem;
+}
 
-  //position
-  position: absolute;
-  bottom: 90px;
-  left: 50%;
-  transform: translate(-50%);
+.light-button{
+  color: $dark-text;
+  background-color: $light-color;
+}
+
+.dark-button{
+  border: 1px solid $light-color;
+  color: $light-color;
+  background-color: transparent;
 }

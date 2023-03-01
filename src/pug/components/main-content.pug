@@ -1,9 +1,9 @@
 main
-  .main-container.inactive
+  .main-container
     .icon-container.pentagon-icon-container
       img(src="./src/images/bg-pentagon.svg" alt="pentagon" class="pentagon")
       each img, move in moves
         +img-item(img, move, "icon-container__"+move+"-icon"+" icon-container__icon")
 
   include ./match-section.pug
-  button.dark-button RULES
+  button.button.dark-button.main__button RULES
