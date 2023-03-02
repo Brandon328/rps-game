@@ -32,8 +32,10 @@
     justify-items: center;
     align-items: center;
     grid-template-rows: auto auto;
+
     picture{
-      margin: 10px 0;
+      margin: 10px;
+      position: relative;
       width: 33vw;
       height: 33vw;
       max-width: 230px;
@@ -45,6 +47,39 @@
       order: 1;
       font-weight: 600;
       text-align: center;
+      z-index: 2;
     }
   }
+}
+
+//Animations for winners
+
+@keyframes anwinner {
+  0%{
+    box-shadow: 
+      0px 0px 0px 0px rgb(59, 67, 99,.0);
+  }  
+  30%{
+    box-shadow: 
+      0px 0px 0px 15px rgb(59, 67, 99,.4);
+  }
+  100%{
+    box-shadow: 
+      0px 0px 0px 60px rgb(59, 67, 99,.0);
+  }
+}
+
+.icon-container--winner::after, .icon-container--winner::before{
+  content:'';
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  max-width: inherit;
+  max-height: inherit;
+  border-radius: 50%;
+  animation: anwinner 3s infinite;
+  animation-timing-function: linear;
+}
+.icon-container--winner::before{
+  animation-delay: 1.5s;
 }

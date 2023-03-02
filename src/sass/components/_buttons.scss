@@ -7,12 +7,13 @@
   font-size: 0.75rem;
 }
 
-.light-button{
+.light-button, .dark-button:hover{
   color: $dark-text;
   background-color: $light-color;
+  border: none;
 }
 
-.dark-button{
+.dark-button, .light-button:hover{
   border: 1px solid $light-color;
   color: $light-color;
   background-color: transparent;

@@ -28,9 +28,8 @@ main{
         position: absolute;
       }
       .scissor-icon-container{
-        top: 0;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        top: -60px;
+        margin: 0 auto;
       }
       .paper-icon-container{
         top: 17%;
@@ -54,6 +53,10 @@ main{
 
 @each $move, $light-color, $dark-color in $moves{
   .#{$move}-icon-container{
+    transition: transform 50ms ease-in;
     @include move-item($light-color, $dark-color);
+  }
+  .#{$move}-icon-container:active{
+    transform: scale(0.7);
   }
 }
