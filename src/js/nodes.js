@@ -17,6 +17,7 @@ const pcPick = matchSection.querySelector('.match-section__pc-pick-container pic
 const userPickIcon = matchSection.querySelector('.match-section__user-pick-container picture img');
 const pcPickIcon = matchSection.querySelector('.match-section__pc-pick-container picture img');
 const resultsContainer = matchSection.querySelector('.match-section__results-container');
+const score = document.getElementById('score');
 
 export {
   btnPlayAgain, matchSection, mainContainer,
@@ -24,5 +25,5 @@ export {
   spockItem, lizardItem, paperItem, btnRules,
   rulesOverlay, rulesContainer, btnCloseRules,
   userPick, pcPick, userPickIcon, pcPickIcon,
-  resultsContainer, preloader
+  resultsContainer, preloader, score
 }

@@ -1,5 +1,18 @@
 import * as nodes from './nodes';
 
+function updateScore() {
+  let score;
+  if (localStorage.getItem('score'))
+    score = parseInt(localStorage.getItem('score'))
+  else {
+    localStorage.setItem('score', '0');
+    score = 0;
+  }
+  score++;
+  localStorage.setItem('score', score);
+  nodes.score.innerText = score;
+}
+
 function getPcMoves() {
   const moves = [
     'paper',
@@ -63,6 +76,7 @@ function showMoves(userMove) {
         // Declarar ganador al user
         nodes.resultsContainer.querySelector('h2').innerText = 'you win';
         nodes.userPick.classList.add('icon-container--winner');
+        updateScore();
       }
       else {
         // Declarar ganador al PC
