@@ -52,8 +52,10 @@
       background-color: $unpick-color;
       border-radius: 50%;
       transition: transform .5s ease-in;
+      cursor:default;
     }
     h3{
+      // cursor:cell;
       order: 1;
       font-weight: 600;
       text-align: center;

@@ -1,3 +1,4 @@
+const preloader = document.querySelector('.preloader-container');
 const btnPlayAgain = document.querySelector('#btnPlayAgain');
 const matchSection = document.querySelector('.match-section');
 const mainContainer = document.querySelector('.main-container');
@@ -23,5 +24,5 @@ export {
   spockItem, lizardItem, paperItem, btnRules,
   rulesOverlay, rulesContainer, btnCloseRules,
   userPick, pcPick, userPickIcon, pcPickIcon,
-  resultsContainer
+  resultsContainer, preloader
 }
