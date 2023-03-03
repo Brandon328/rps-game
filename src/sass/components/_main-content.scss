@@ -26,6 +26,11 @@ main{
       }
       .move{
         position: absolute;
+        transition: transform 50ms ease-in;
+      }
+      .move:active{
+        position: absolute;
+        transform: scale(0.7);
       }
       .scissor-icon-container{
         top: -60px;
@@ -53,10 +58,6 @@ main{
 
 @each $move, $light-color, $dark-color in $moves{
   .#{$move}-icon-container{
-    transition: transform 50ms ease-in;
     @include move-item($light-color, $dark-color);
-  }
-  .#{$move}-icon-container:active{
-    transform: scale(0.7);
   }
 }

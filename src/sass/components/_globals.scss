@@ -45,7 +45,6 @@ $moves:
   box-shadow: 
     inset #bbbed5 0px 10px,
     $dark-color 0px 10px;
-
   img{
     width: 45%;
   }
@@ -66,4 +65,5 @@ body{
   padding: 30px;
   position: relative;
   font-size: 1rem;
+  overflow-x: hidden;
 }
