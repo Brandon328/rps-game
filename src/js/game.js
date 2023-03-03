@@ -52,9 +52,9 @@ function showMoves(userMove) {
   setTimeout(() => {
     // Mostramos los picks
     nodes.userPick.classList.add(`${userMove}-icon-container`);
-    nodes.userPickIcon.src = `./src/images/icon-${userMove}.svg`;
+    nodes.userPickIcon.src = `images/icon-${userMove}.svg`;
     nodes.pcPick.classList.add(`${pcMove}-icon-container`);
-    nodes.pcPickIcon.src = `./src/images/icon-${pcMove}.svg`;
+    nodes.pcPickIcon.src = `images/icon-${pcMove}.svg`;
 
     // Mostramos los resultados después de un segundo para la animación
     setTimeout(() => {

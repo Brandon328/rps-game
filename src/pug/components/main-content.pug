@@ -1,7 +1,7 @@
 main
   .main-container
     .icon-container.pentagon-icon-container
-      img(src="./src/images/bg-pentagon.svg" alt="pentagon" class="pentagon")
+      img(src="images/bg-pentagon.svg" alt="pentagon" class="pentagon")
       each img, move in moves
         +img-item(img, move, "icon-container__"+move+"-icon"+" icon-container__icon")
 
